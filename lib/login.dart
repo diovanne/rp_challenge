@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'services.dart';
 
-class Signup extends StatefulWidget {
-  const Signup({Key? key}) : super(key: key);
+class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
 
   @override
-  State<Signup> createState() => _SignupState();
+  State<Login> createState() => _LoginState();
 }
 
-class _SignupState extends State<Signup> {
+class _LoginState extends State<Login> {
   TextEditingController _signupNameController = TextEditingController();
   TextEditingController _signupEmailController = TextEditingController();
   TextEditingController _signupPasswordController = TextEditingController();
@@ -22,19 +22,6 @@ class _SignupState extends State<Signup> {
       body: SingleChildScrollView(
           child: Column(
         children: [
-          Padding(
-            padding: EdgeInsets.fromLTRB(20, 32, 20, 0),
-            child: TextField(
-              controller: _signupEmailController,
-              textInputAction: TextInputAction.next,
-              keyboardType: TextInputType.name,
-              decoration: InputDecoration(
-                labelStyle: TextStyle(fontSize: 25),
-                border: OutlineInputBorder(),
-                labelText: 'full name',
-              ),
-            ),
-          ),
           Padding(
             padding: EdgeInsets.fromLTRB(20, 32, 20, 0),
             child: TextField(
@@ -70,7 +57,7 @@ class _SignupState extends State<Signup> {
                 child: ElevatedButton(
                   onPressed: () {},
                   child: Text(
-                    'Signup',
+                    'Sign in',
                     style: TextStyle(fontSize: 25),
                   ),
                 ),
